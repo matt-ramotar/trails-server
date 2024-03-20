@@ -1,6 +1,6 @@
 # Trails Server
 
-This is the backend for the Trails sample app. Provides functionality for managing trails, user activities, bookmarks,
+This is the backend for the [Trails](https://github.com/mobilenativefoundation/trails) sample app. Provides functionality for managing trails, user activities, bookmarks,
 and reviews. Built using Node.js, Express, TypeScript, and MongoDB with Mongoose.
 
 ## Table of Contents
