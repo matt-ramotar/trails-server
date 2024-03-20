@@ -7,7 +7,7 @@
         "url": "https://github.com/matt-ramotar/trails-server"
     },
     "author": "Matt Ramotar",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "scripts": {
         "build-ts": "tsc",
         "build": "npm run build-ts && npm run lint",
