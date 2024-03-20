@@ -8,5 +8,6 @@ router.post('/', trailController.createTrail);
 router.get('/', trailController.getTrails);
 router.get('/:id', trailController.getTrailById);
 router.delete('/:id', trailController.deleteTrail);
+router.put('/:id', trailController.updateTrail)
 
 export default router;
