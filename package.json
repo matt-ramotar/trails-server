@@ -1,0 +1,39 @@
+{
+    "name": "Trails Server v1",
+    "version": "1.0.0",
+    "description": "Server for the Trails sample app",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/matt-ramotar/trails-server"
+    },
+    "author": "Matt Ramotar",
+    "license": "MIT",
+    "scripts": {
+        "build-ts": "tsc",
+        "build": "npm run build-ts && npm run lint",
+        "debug": "npm run build && npm run watch-debug",
+        "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+        "serve-debug": "nodemon --inspect dist/server.js",
+        "serve": "node dist/server.js",
+        "start": "npm run serve",
+        "test": "jest --forceExit --coverage --verbose",
+        "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\"",
+        "watch-node": "nodemon dist/server.js",
+        "watch-test": "npm run test -- --watchAll",
+        "watch-ts": "tsc -w",
+        "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\""
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "express": "^4.18.3",
+        "mongoose": "^8.2.2",
+        "typescript": "^4.9.5"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.19.5",
+        "@types/express": "^4.17.21"
+    }
+}
